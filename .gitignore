@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+**/.venv/
+**/venv/
+
+# Neovim
+nvim/.cache/
+nvim/.local/
+
+# Temporários
+*.swp
+*.swo
+
+# Segredos
+.env
