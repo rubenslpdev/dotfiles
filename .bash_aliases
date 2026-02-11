@@ -15,3 +15,28 @@ alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range :50
 alias cat="batcat"
 alias find="fdfind"
 alias v="nvim"
+
+gpush() {
+    # 1. Verifica se há algo para commitar
+    if [ -z "$(git status --porcelain)" ]; then
+        echo "⚠️  Nada para enviar: o repositório está limpo."
+        return
+    fi
+
+    # 2. Pergunta a mensagem de commit
+    echo "📝 Digite a mensagem do commit:"
+    read mensagem
+
+    # 3. Se a mensagem for vazia, cancela
+    if [ -z "$mensagem" ]; then
+        echo "❌ Erro: A mensagem não pode ser vazia. Push cancelado."
+        return
+    fi
+
+    # 4. Executa os comandos
+    git add .
+    git commit -m "$mensagem"
+    git push
+
+    echo "✅ Sucesso! Tudo enviado para o GitHub."
+}
