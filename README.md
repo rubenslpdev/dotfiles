@@ -1,12 +1,8 @@
 # Dotfiles
 
-OS: Debian 13 (trixie)
+Collection of config files from my notebook Accer Aspire running Debian 13. 
 
----
-
-Collection of config files from my notebook Accer Aspire 
-
-Including:
+Includes:
     - Bash
     - Zshrc
     - Aliases
@@ -14,3 +10,9 @@ Including:
     - Midnight Commander
     - Micro
     - Xfce config
+
+## How to replicate my setup
+
+1. Clone repo.
+2. Install GNU Stow.
+3. Use `stwo .` inside the folder to create symbolic links.
