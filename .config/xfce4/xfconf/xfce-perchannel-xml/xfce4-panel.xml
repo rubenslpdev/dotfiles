@@ -44,6 +44,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “net_2g2f0b77” active: net_2g2f0b77 (79%)"/>
         <value type="string" value="wi-fi network connection “net_2g2f0b77” active: net_2g2f0b77 (77%)"/>
         <value type="string" value="wi-fi network connection “net_2g2f0b77” active: net_2g2f0b77 (78%)"/>
         <value type="string" value="wi-fi network connection “net_2g2f0b77” active: net_2g2f0b77 (84%)"/>
