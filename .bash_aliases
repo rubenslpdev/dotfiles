@@ -40,3 +40,5 @@ gpush() {
 
     echo "✅ Sucesso! Tudo enviado para o GitHub."
 }
+
+mann () {man $1 | batcat -l man}
