@@ -8,18 +8,19 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="josh"
+#ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-#ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "risto" "frisk" "pmcgee" "josh" "gianu" )
+ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "risto" "frisk" "pmcgee" "gianu" )
 
 # Faz apenas buscar arquivos e pastas úteis usando fdfind
 export FZF_ALT_C_COMMAND="fdfind --type d --exclude .git"
 export FZF_CTRL_T_COMMAND="fdfind --type f --exclude .git"
 export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :500 {}'"
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -76,11 +77,11 @@ export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :500 {}'"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  fzf
-)
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    fzf
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,9 +123,4 @@ fi
 # Inicializa o zoxide substituindo o comando 'cd' e criando o 'cdi'
 eval "$(zoxide init zsh --cmd cd)"
 
-# fnm
-FNM_PATH="/home/santopo/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
+
