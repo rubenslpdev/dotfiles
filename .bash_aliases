@@ -12,7 +12,6 @@ alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range :50
 alias cat="batcat"
 alias find="fdfind"
 alias v="nvim"
-#alias y="yazi"
 
 # Programas
 alias buy='cd ~/Projetos/python/to_buy && python3 main.py && cd - > /dev/null'
@@ -73,7 +72,7 @@ manutencao() {
 }
 
 
-#Yazi
+#Yazi (file manager)
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

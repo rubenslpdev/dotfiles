@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
- export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="random"
+ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -20,7 +20,7 @@ ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "risto" "frisk" "pmcgee" "gianu" )
 export FZF_ALT_C_COMMAND="fdfind --type d --exclude .git"
 export FZF_CTRL_T_COMMAND="fdfind --type f --exclude .git"
 export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :500 {}'"
-
+export EDITOR=nvim
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
