@@ -12,10 +12,7 @@ alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range :50
 alias cat="batcat"
 alias find="fdfind"
 alias v="nvim"
-
-# Programas
-alias buy='cd ~/Projetos/python/to_buy && python3 main.py && cd - > /dev/null'
-alias livros='cd ~/Projetos/python/livros_lidos/cli/ && python3 main.py && cd - > /dev/null'
+alias novolivro="python3 ~/Livros_lidos/scripts/novo_livro.py"
 
 # Github push
 gpush() {
