@@ -9,10 +9,12 @@ alias quit="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias l="ls -hl"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range :500 {}'"
-alias cat="batcat"
-alias find="fdfind"
 alias v="nvim"
+
+# Adicionar em Livros_lidos
 alias novolivro="python3 ~/Livros_lidos/scripts/novo_livro.py"
+# Alias para atualizar preços do hledger
+alias up-prices='~/Finance/scripts/.venv/bin/python ~/Finance/scripts/update_prices.py >> ~/Finance/precos.journal'
 
 # Github push
 gpush() {
@@ -78,3 +80,5 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+

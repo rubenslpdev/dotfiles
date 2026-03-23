@@ -4,6 +4,9 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Hledger path
+export LEDGER_FILE='~/Finance/main.journal'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -14,7 +17,7 @@ ZSH_THEME="random"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "risto" "frisk" "pmcgee" "gianu" )
+ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "risto" "frisk" "pmcgee" "gianu" "josh" )
 
 # Faz apenas buscar arquivos e pastas úteis usando fdfind
 export FZF_ALT_C_COMMAND="fdfind --type d --exclude .git"
@@ -123,4 +126,9 @@ fi
 # Inicializa o zoxide substituindo o comando 'cd' e criando o 'cdi'
 eval "$(zoxide init zsh --cmd cd)"
 
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
