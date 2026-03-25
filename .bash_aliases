@@ -1,4 +1,3 @@
-alias atualizar='manutencao'
 alias instalar='sudo apt install'
 alias remover='sudo apt remove'
 alias search='apt search'
@@ -10,11 +9,6 @@ alias reboot="sudo reboot"
 alias l="ls -hl"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range :500 {}'"
 alias v="nvim"
-
-# Adicionar em Livros_lidos
-alias novolivro="python3 ~/Livros_lidos/scripts/novo_livro.py"
-# Alias para atualizar preços do hledger
-alias up-prices='~/Finance/scripts/.venv/bin/python ~/Finance/scripts/update_prices.py >> ~/Finance/precos.journal'
 
 # Github push
 gpush() {
@@ -48,7 +42,7 @@ mann () {man $1 | batcat -l man}
 
 # Função para atualização e manutenção do sistema
 
-manutencao() {
+atualizar() {
     echo "--- 1. Atualizando Lista de Repositórios e Pacotes ---"
     sudo apt update && sudo apt upgrade -y
 
@@ -81,4 +75,25 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Hledger add
+hadd() {
+    # 1. Atualiza os preços dos ativos
+    echo "Updating prices..."
+    ~/Finance/scripts/.venv/bin/python ~/Finance/scripts/update_prices.py >> ~/Finance/precos.journal
 
+    # 2. Adiciona a nova entrada (Interativo)
+    hledger add -f ~/Finance/2026.journal
+
+    # 3. Mostra o saldo total atualizado
+    echo -e "\n--- Current Balance (Market Value) ---"
+    hledger bal ativos --market -V
+}
+
+# Adicionar novo livro
+novolivro() {
+	echo "Adicione novo livro"
+	python3 ~/Livros_lidos/scripts/novo_livro.py
+	
+	echo "Atualizando o resumo"
+	python3 ~/Livros_lidos/scripts/resumo.py
+}

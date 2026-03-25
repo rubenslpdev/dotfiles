@@ -7,9 +7,6 @@ Includes:
     - Zshrc
     - Aliases
     - NeoVim (config & plugins)
-    - Midnight Commander
-    - Micro
-    - Xfce config
 
 ## How to replicate my setup
 
