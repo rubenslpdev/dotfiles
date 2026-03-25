@@ -1,8 +1,5 @@
 alias instalar='sudo apt install'
 alias remover='sudo apt remove'
-alias search='apt search'
-alias zshconfig="micro ~/.zshrc"
-alias reload="source ~/.zshrc"
 alias myip="hostname -i"
 alias quit="sudo shutdown -h now"
 alias reboot="sudo reboot"
@@ -37,22 +34,16 @@ gpush() {
 }
 
 # Man turbinado
-
 mann () {man $1 | batcat -l man}
 
 # Função para atualização e manutenção do sistema
-
 atualizar() {
     echo "--- 1. Atualizando Lista de Repositórios e Pacotes ---"
-    sudo apt update && sudo apt upgrade -y
 
     echo "\n--- 2. Removendo Pacotes Desnecessários (Órfãos) ---"
-    # O autoremove no Ubuntu é bem eficiente para limpar kernels antigos e dependências
     sudo apt autoremove -y
 
     echo "\n--- 3. Limpando o Cache do APT ---"
-    # O 'autoclean' remove apenas arquivos de pacotes que não podem mais ser baixados
-    # O 'clean' removeria tudo, mas o autoclean é mais seguro para o dia a dia
     sudo apt autoclean
 
     echo "\n--- 4. Limpando Logs do Systemd (manter apenas os últimos 2 dias) ---"
@@ -66,7 +57,6 @@ atualizar() {
 
 
 #Yazi (file manager)
-
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -97,3 +87,4 @@ novolivro() {
 	echo "Atualizando o resumo"
 	python3 ~/Livros_lidos/scripts/resumo.py
 }
+
