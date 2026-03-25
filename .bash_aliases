@@ -39,7 +39,8 @@ mann () {man $1 | batcat -l man}
 # Função para atualização e manutenção do sistema
 atualizar() {
     echo "--- 1. Atualizando Lista de Repositórios e Pacotes ---"
-
+    sudo apt update && sudo apt upgrade -y
+    
     echo "\n--- 2. Removendo Pacotes Desnecessários (Órfãos) ---"
     sudo apt autoremove -y
 

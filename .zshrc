@@ -5,7 +5,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # Hledger path
-export LEDGER_FILE='~/Finance/main.journal'
+export LEDGER_FILE=~/Finance/main.journal
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -128,7 +128,7 @@ eval "$(zoxide init zsh --cmd cd)"
 
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
