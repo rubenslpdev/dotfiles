@@ -77,7 +77,7 @@ hadd() {
 
     # 3. Mostra o saldo total atualizado
     echo -e "\n--- Current Balance (Market Value) ---"
-    hledger bal ativos --market -V
+    hledger bal assets --market -V
 }
 
 # Adicionar novo livro
