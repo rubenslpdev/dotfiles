@@ -33,9 +33,6 @@ gpush() {
     echo "✅ Sucesso! Tudo enviado para o GitHub."
 }
 
-# Man turbinado
-mann () {man $1 | batcat -l man}
-
 # Função para atualização e manutenção do sistema
 atualizar() {
     echo "--- 1. Atualizando Lista de Repositórios e Pacotes ---"
@@ -56,7 +53,6 @@ atualizar() {
     echo "\n--- Concluído! Sistema Ubuntu limpo e atualizado. ---"
 }
 
-
 #Yazi (file manager)
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -66,26 +62,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Hledger add
-hadd() {
-    # 1. Atualiza os preços dos ativos
-    echo "Updating prices..."
-    ~/Finance/scripts/.venv/bin/python ~/Finance/scripts/update_prices.py >> ~/Finance/precos.journal
 
-    # 2. Adiciona a nova entrada (Interativo)
-    hledger add -f ~/Finance/2026.journal
-
-    # 3. Mostra o saldo total atualizado
-    echo -e "\n--- Current Balance (Market Value) ---"
-    hledger bal assets --market -V
-}
-
-# Adicionar novo livro
-novolivro() {
-	echo "Adicione novo livro"
-	python3 ~/Livros_lidos/scripts/novo_livro.py
-	
-	echo "Atualizando o resumo"
-	python3 ~/Livros_lidos/scripts/resumo.py
-}
 
